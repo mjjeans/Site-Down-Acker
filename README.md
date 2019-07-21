@@ -5,6 +5,6 @@ In our Network Operations Center, we have to send out notifications at the one h
 <br>
 This app will allow you to track when those notifications need to go out or whem you need to check the status of an Aruba or Helmer. When it is time, an email notification is sent to a chosen email address thorugh your Outlook client.
 <br>
-After a notification event, the timer is reset to notify agian in fifteen minutes.
+After a notification event, the timer is reset to notify again in fifteen minutes.
 <br>
 It keeps a display of all pending notifications in the order in which you will be notified with the time the notification will be sent out.
