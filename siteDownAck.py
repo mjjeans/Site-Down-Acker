@@ -85,11 +85,10 @@ root.geometry('390x260+200+200')
 clinic_choice = tkinter.Variable(root)
 alarm_type_choice = tkinter.Variable(root)
 time_down_choice = tkinter.Variable(root)
-email_recipient = tkinter.Variable(root)
+email_recipient = tkinter.StringVar()
 
 watching = []
 email_recipients = ['some-email@email.com', 'another-email@email.com', 'yet-another-email@email.com']
-email_recipients = sorted(email_recipients)
 
 entry_frame = tkinter.Frame(root)
 entry_frame.grid(row=0, column=0)
@@ -114,7 +113,8 @@ delete_button.grid(row=2, column=0)
 
 mail_frame = tkinter.Frame(root)
 mail_frame.grid(row=2, column=0)
-mail_recipient = tkinter.OptionMenu(mail_frame, email_recipient, *email_recipients)
+email_recipient_label = tkinter.Label(mail_frame, text="Recipients:").grid(row=0, column=0)
+mail_recipient = tkinter.OptionMenu(mail_frame, email_recipient, *sorted(email_recipients))
 mail_recipient.grid(row=0, column=0)
 
 schedule.every(30).seconds.do(check_alarms)
